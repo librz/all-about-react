@@ -24,9 +24,9 @@ For this you can use `useMemo`.
 
 By default, everytime a component re-renders, all sub components under it will re-render even if its props haven't changed.
 
-So a general rule of sum is to scope state only to the component that absolutelu needs it.
+So a general rule of sum is to scope state only to the component that absolutely needs it.
 
-This problem is particularly common in context (since in the setup process of context, you'd wrap components with a context provider components). So don't over use context.
+This problem is particularly common in context (since in context setup phrase, you'd wrap components with a context provider component). So don't over use context.
 
 To share state and only update components that uses the shared state, consider using publish-subscribe based state containers such as `zustand`.
 
@@ -38,9 +38,4 @@ This is a case-by-case optimization.
 
 First you need to identify excessive re-renders and find out what's causing it.
 
-Since frequency is a time related concept, you'd most want to limit rate of state change using techniques such as `debounce` or `throttle`.
-
-
-
-
-
+Since frequency is a time related concept, you'd want to limit rate of state change using techniques such as `debounce` or `throttle`.
